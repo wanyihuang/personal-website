@@ -1,6 +1,61 @@
 /*Wendy's CSS Page*/
-/* body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-} */
+.logo {
+    transform: scaleX(-1);
+}
+
+div {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+.firstRow {
+    padding: 30px;
+    margin: 10px;
+}
+
+h1 {
+    font-style: italic;
+}
+
+.secondRow {
+    background-color: white;
+    /* font color is to be black: */
+    color: black;
+    /* padding provides space between contents and border */
+    padding: 20px;
+    /* margin provides space between element and its neighbouring elements */
+    margin: 10px;
+}
+
+.thirdRow {
+    padding: 20px; 
+    margin: 10px;
+} 
+
+.thirdRowWrap {
+    column-count: 3; 
+    column-gap: 20px;
+}
+
+
+
+/* Copied from someone's source code. Obviously change this once you know what to do: */
+.myLinks {
+    padding: 0px;
+    margin: 0px;
+}
+/* Edit this. You don't want to copy someone else's work: */
+  .myLinks a img{
+    max-height: 50px;
+    padding: 30px;
+
+    /* What does this do?: */
+    transition: all 0.3s ease-in-out;
+}
+/* Edit the effects. You don't want to copy someone else's work: */
+.myLinks a img:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+/* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */

@@ -1,46 +1,63 @@
 <!DOCTYPE html>
+<html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="wendy-css.css">
         <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap" rel="stylesheet">
         <style>
         body {
             font-family: 'Helvetica', sans-serif; font-size: 24px; color: #333;
         }
-    </style>
+        </style>
         <title>Personal Website</title>
     </head>
-
-<html>
 <body>
- <!-- FIRST ROW: -->
+    <div class="logo">
+        <img src="logo.png" alt="Website Logo" width="50" height="50" style="border-radius: 20px;">
+    </div>
+ <!-- FIRST ROW: WHO ARE YOU? WHAT DO YOU DO? HOW CAN YOU HELP?-->
     <div class="firstRow">
         <h1>WENDY HUANG</h1>
-            <p>Hi! I'm Wendy. I'm currently pursuing a Bachelors of Cybersecurity at UTS and my life ambition is to 
-                build and foster a community of like-minded folks who are also looking for a place to call home.
-                I hope I can be of use with my services of: HTML/CSS, JS, PHP, React, Python, SQL. More coming.</p>
+        <p>Hi! I'm Wendy. I'm currently pursuing a Bachelors of Cybersecurity at UTS and my life ambition is to 
+            build and foster a community of like-minded folks who are also looking for a place to call home.
+            I hope I can be of use with my services of: HTML/CSS, JS, PHP, React, Python, SQL. More coming.</p>
     </div>
 
-<!-- SECOND ROW: -->
+<!-- SECOND ROW: EXPERIENCE-->
     <div class="secondRow">
         <h2>My Experience</h2>
-        <!-- NO wall of text! Break up with White Space/image/video/etc -->
         <!-- EG: Two-column text layout for 1)uni exp, 2)work exp -->
-            <p>Informative and concise paragraph on uni experience, work experience (if revelant)</p>
-            <p>Work Experience: 3 years of customer service (and counting!)</p>
-            <p>Have a project idea you'd like to collaborate on? Shoot me a DM on LinkedIn: https://www.linkedin.com/in/wendy-huang-116635191/</p>
+        <p>Informative and concise paragraph on uni experience, work experience (if revelant)</p>
+        <p>Work Experience: 3 years of customer service (and counting!)</p>
+        <p>Have a project idea you'd like to collaborate on? Shoot me a DM on LinkedIn: https://www.linkedin.com/in/wendy-huang-116635191/</p>
     </div>
 
-<!-- THIRD ROW: -->
+<!-- THIRD ROW: PROJECTS-->
     <div class="thirdRow">
-        <h3>My First Heading</h3>
+    <!-- There is a slight visual issue with this Row. The thirdRowWrap div is wonkified and not aligned with the heading/thirdRow div... -->
+    <h2 style="margin-bottom: 30px;">My Projects</h2>
+        <div class="thirdRowWrap">
+            <h4>My First Project</h4>
+            <!-- INTERACTIVE IMAGE HERE -->
             <p>My first paragraph.</p>
 
-        <h4>My First Heading</h4>
-            <p>My first paragraph.</p>
+            <h4>My Second Project</h4>
+            <!-- INTERACTIVE IMAGE HERE -->
+            <p>My second paragraph.</p>
 
-        <h5>My First Heading</h5>
-            <p>My first paragraph.</p>
+            <h4>My Third Project</h4>
+            <!-- INTERACTIVE IMAGE HERE -->
+            <p>My third paragraph.</p>
+        </div>
     </div>
+
+<div class="footer">
+    <h4>Footer</h4>
+    <div class="myLinks">
+        <a href="https://github.com/wanyihuang/"><img src="github.png"/></a>
+        <a href="https://www.linkedin.com/in/wendy-huang-116635191/"><img src="LinkedIn.png"/></a>
+    </div>
+</div>
 
 </body>
 </html>
