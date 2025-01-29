@@ -3,40 +3,53 @@
     transform: scaleX(-1);
 }
 
+body {
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+    height: auto; 
+    margin: 0px;
+}
+
 div {
-    margin: 0 auto;
-    width: 80%; 
+    max-width: 80%; 
 }
 
 .firstRow {
-    padding: 30px;
+    padding: 30px 60px;
     margin: 10px;
 }
 
 h1 {
     font-style: italic;
+    overflow: hidden;
+    height: 0px;
+    animation: dropDown 1s ease-out forwards;
+    text-align: center;
 }
 
+@keyframes dropDown {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 47px; /* Adjust based on your font size */
+    }
+  }
+
+/* Why are my div containers all different sizes...?: */
 .secondRow {
-    background-color: white;
-    /* font color is to be black: */
-    color: black;
-    /* padding provides space between contents and border */
-    padding: 20px;
-    /* margin provides space between element and its neighbouring elements */
-    margin: 10px;
-}
-
-.thirdRow {
-    padding: 20px; 
+    padding: 30px 60px;
     margin: 10px;
 } 
 
-.thirdRowWrap {
+.secondRowWrap {
     column-count: 3; 
-    column-gap: 20px;
+    column-gap: 40px;
 }
 
+.secondRowWrap p {
+    font-size: 20px;
+}
 
 
 /* Copied from someone's source code. Obviously change this once you know what to do: */
