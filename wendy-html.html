@@ -12,44 +12,56 @@
         <title>Personal Website</title>
     </head>
 <body>
-    <!-- New problem: logo is no longer on top-corner side... -->
+<div class="pageWidth">
     <div class="logo">
-        <img src="logo.png" alt="Website Logo" width="50" height="50" style="border-radius: 20px;">
+        <img src="logo.png" alt="Website Logo" width="50" height="50">
     </div>
+
+    <!-- FIRSTROW DIV CONTAINER IS COMPLETED!!! -->
  <!-- FIRST ROW: WHO ARE YOU? WHAT DO YOU DO? HOW CAN YOU HELP?-->
     <div class="firstRow">
-        <h1>WENDY HUANG</h1>
+        <div class="h1Div" style="display: inline-flex; height: 7rem;">
+        <h1>Wendy Huang.</h1>
+        </div>
         <p>Hi! I'm Wendy. I'm currently pursuing a Bachelors of Cybersecurity at UTS and my life ambition is to 
             build and foster a community of like-minded folks who are also looking for a place to call home.
-            I hope I can be of use with my services of: HTML/CSS, JS, PHP, React, Python, SQL. More coming.</p>
+            I hope I can be of use with my services of: HTML/CSS, JS, PHP, React, Python, SQL.</p>
     </div>
 
 <!-- SECOND ROW: PROJECTS-->
+  <!-- found problem here: -->
     <div class="secondRow">
-    <!-- There is a slight visual issue with this Row. The secondRowWrap div is wonkified and not aligned with the heading/secondRow div... -->
-    <h2 style="margin-bottom: 30px;">PROJECTS</h2>
+            <h2>Projects.</h2>
         <div class="secondRowWrap">
+            <div class="flexRow">
             <h4>My First Project</h4>
             <!-- INTERACTIVE IMAGE HERE -->
-            <p>My first paragraph.</p>
+            <p style="overflow-y:scroll;">A sample newsletter template circulating fresh headlines collected from multiple news sources. The sidebar will contain a Job Listings section where the data is scraped from multiple Job Sites.</p>
+            </div>
 
+            <div class="flexRow">
             <h4>My Second Project</h4>
             <!-- INTERACTIVE IMAGE HERE -->
             <p>My second paragraph.</p>
+            </div>
 
+            <div class="flexRow">
             <h4>My Third Project</h4>
             <!-- INTERACTIVE IMAGE HERE -->
             <p>My third paragraph.</p>
+            </div>
         </div>
     </div>
 
 <div class="footer">
-    <h4>Footer</h4>
     <div class="myLinks">
-        <a href="https://github.com/wanyihuang/"><img src="github.png"/></a>
-        <a href="https://www.linkedin.com/in/wendy-huang-116635191/"><img src="LinkedIn.png"/></a>
+        <ul style="list-style: none; display: flex;  gap: 10px;">
+            <li><a href="https://github.com/wanyihuang/"><img src="github.png"/></a></li>
+            <li><a href="https://www.linkedin.com/in/wendy-huang-116635191/"><img src="LinkedIn.png"/></a></li>
+            <li><a href="https://buy.stripe.com/3csdS2fPcanL1AkfYY"><button>Tip Me?</button></a></li>
+        </ul>
     </div>
 </div>
-
+</div>
 </body>
 </html>

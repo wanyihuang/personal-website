@@ -1,13 +1,20 @@
 /*Wendy's CSS Page*/
 .logo {
     transform: scaleX(-1);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
 }
 
-body {
-    display: grid;
-    place-items: center; /* Centers both horizontally and vertically */
-    height: auto; 
-    margin: 0px;
+/* Fix this part so the whole page width is CENTERED, but still only 90% of page width... */
+.pageWidth {
+    place-items: center;
+    /* testing max-width. set back to 80% when done troubleshooting */
+    max-width: 100%; 
+    margin: 0 auto;
+    display: inline-block; 
 }
 
 div {
@@ -17,58 +24,70 @@ div {
 .firstRow {
     padding: 30px 60px;
     margin: 10px;
-}
-
-h1 {
-    font-style: italic;
-    overflow: hidden;
-    height: 0px;
-    animation: dropDown 1s ease-out forwards;
     text-align: center;
+    max-width: 65%;
 }
 
-@keyframes dropDown {
-    0% {
-      height: 0px;
-    }
-    100% {
-      height: 47px; /* Adjust based on your font size */
-    }
-  }
+.h1Div, h2 {
+    transition: all 0.3s ease-in-out;
+    padding: 30px 60px 0px 60px;
+}
 
-/* Why are my div containers all different sizes...?: */
+.h1Div:hover, h2:hover {
+    transform: scale(1.10);
+}
+
 .secondRow {
-    padding: 30px 60px;
-    margin: 10px;
+    text-align: center;
+    display: inline;
 } 
 
 .secondRowWrap {
-    column-count: 3; 
-    column-gap: 40px;
+    padding: 5px 60px 0px 60px;
+    margin: 10px;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.secondRowWrap h2 {
+    align-self: center;
 }
 
 .secondRowWrap p {
     font-size: 20px;
 }
 
+.flexRow {
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid black;
+    overflow-y:auto;
+    max-width: 33%;
+    max-height: 200px;
+}
 
-/* Copied from someone's source code. Obviously change this once you know what to do: */
 .myLinks {
     padding: 0px;
     margin: 0px;
 }
-/* Edit this. You don't want to copy someone else's work: */
-  .myLinks a img{
-    max-height: 50px;
-    padding: 30px;
 
-    /* What does this do?: */
+  .myLinks a img {
+    max-height: 45px;
+    padding: 30px;
     transition: all 0.3s ease-in-out;
 }
-/* Edit the effects. You don't want to copy someone else's work: */
-.myLinks a img:hover {
+
+.myLinks a img:hover{
     cursor: pointer;
     transform: scale(1.10);
+}
+
+/*  Relocate this button to a nicer spot when done with Website */
+button {
+    width: 50px;
+    height: 50px;
+    margin-top: 27px;
+    margin-left: 20px;
 }
 
 /* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */
