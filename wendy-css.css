@@ -1,20 +1,35 @@
 /*Wendy's CSS Page*/
-.logo {
+
+/* .logo {
     transform: scaleX(-1);
     border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px;
+} */
+
+html, body {
+    /* https://cdn.custom-cursor.com/db/21688/32/mochi-mochi-peach-cats-goma-with-goose-cursor.png */
+    cursor: url('cat-pointer.png'), default;
+  }
+
+  /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
+  Make sure there is an 'OK' button in the middle, and X button in top right to exit !!! */
+.pageWidth {
+    margin: 0 auto;
+    width: 80%;
+    place-items: center;
+    border-radius: 18px;
+    border: 1px solid black;
+    /* testing to make sure the opacity section works: */
+    background-color: pink;
+    opacity: 0%;
 }
 
-/* Fix this part so the whole page width is CENTERED, but still only 90% of page width... */
-.pageWidth {
-    place-items: center;
-    /* testing max-width. set back to 80% when done troubleshooting */
-    max-width: 100%; 
-    margin: 0 auto;
-    display: inline-block; 
+/* fun hover effect for entire page div! */
+.pageWidth:hover {
+    opacity: 100%;
 }
 
 div {
@@ -28,25 +43,38 @@ div {
     max-width: 65%;
 }
 
-.h1Div, h2 {
+/* smooth transition! */
+.h1Div, h2, .flexRow, .pFirstRow {
     transition: all 0.3s ease-in-out;
+}
+
+.h1Div {
     padding: 30px 60px 0px 60px;
 }
 
-.h1Div:hover, h2:hover {
+/* fun effect on hover :3 */
+.h1Div:hover, h2:hover, .flexRow:hover, .pFirstRow:hover {
     transform: scale(1.10);
+    color: #565044;
 }
 
 .secondRow {
     text-align: center;
-    display: inline;
 } 
 
+/* NOTE: div container wrapping the <h2> title CANNOT be any smaller...*/
+.h2Div {
+    margin: 0 auto;
+}
+
 .secondRowWrap {
-    padding: 5px 60px 0px 60px;
-    margin: 10px;
-    display: inline-flex;
-    gap: 20px;
+    display: inline-flex; 
+    padding: 5px 50px 0px 50px;
+    margin: 0 30px 30px 30px;
+    gap: 40px;
+    justify-content: center; 
+    align-items: center; 
+    height: 300px;
 }
 
 .secondRowWrap h2 {
@@ -58,12 +86,14 @@ div {
 }
 
 .flexRow {
-    display: flex; 
-    flex-direction: column;
     border: 1px solid black;
-    overflow-y:auto;
+    overflow-y: auto;
     max-width: 33%;
+    min-width: 30%;
     max-height: 200px;
+    min-height: 200px;
+    padding: 15px;
+    border-radius: 18px;
 }
 
 .myLinks {
@@ -74,10 +104,13 @@ div {
   .myLinks a img {
     max-height: 45px;
     padding: 30px;
+}
+
+.myLinks a img, button, .pageWidth {
     transition: all 0.3s ease-in-out;
 }
 
-.myLinks a img:hover{
+.myLinks a img:hover, button:hover {
     cursor: pointer;
     transform: scale(1.10);
 }
