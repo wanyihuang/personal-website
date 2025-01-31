@@ -14,7 +14,6 @@ html, body {
 html {
     scroll-behavior: smooth;
     background-image: url('pink-bg.jpg');
-
   }
 
   /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
@@ -42,7 +41,6 @@ html {
     background-color: white;
 }
 
-/* testing card lift effect on .flexrow!: */
 .tButton, .praiseButton {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -52,10 +50,6 @@ html {
 .tButton:hover, .praiseButton:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.praiseButton {
-    background-color: white;
 }
 
 .tButton {
@@ -155,7 +149,8 @@ div {
     padding: 30px;
 }
 
-.myLinks a img, .pageWidth, .praiseButton footer {
+/* took out .praiseButton JUST to test float anim from 2 {}s down: */
+.myLinks a img, .pageWidth, footer {
     transition: all 0.3s ease-in-out;
 }
 
@@ -165,9 +160,18 @@ div {
 }
 
 .praiseButton {
+    background-color: white;
+    margin-top: 10px;
     width: 160px;
     height: 30px;
+    /* testing float anim from chatgpt: */
+    animation: float 3s ease-in-out infinite;
 }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
 
 .tButton, .praiseButton {
     border-radius: 10px;
