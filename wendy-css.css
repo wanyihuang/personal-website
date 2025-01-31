@@ -1,5 +1,4 @@
 /*Wendy's CSS Page*/
-
 /* .logo {
     transform: scaleX(-1);
     border-radius: 20px;
@@ -8,15 +7,19 @@
     left: 0;
     padding: 10px;
 } */
-
 html, body {
-    /* https://cdn.custom-cursor.com/db/21688/32/mochi-mochi-peach-cats-goma-with-goose-cursor.png */
     cursor: url('cat-pointer.png'), default;
+  }
+
+html {
+    scroll-behavior: smooth;
+    background-image: url('pink-bg.jpg');
+
   }
 
   /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
   Make sure there is an 'OK' button in the middle, and X button in top right to exit !!! */
-.pageWidth {
+.pageWidth, footer{
     margin: 0 auto;
     width: 80%;
     place-items: center;
@@ -24,16 +27,59 @@ html, body {
     border: 1px solid black;
     /* testing to make sure the opacity section works: */
     background-color: pink;
-    opacity: 0%;
+    opacity: 70%;
+}
+
+.pageWidth, .tButton, .flexRow, .praiseButton {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.pageWidth:hover, .tButton:hover, .flexRow:hover, .praiseButton:hover {
+    box-shadow: 0 0 15px #565044;;
+}
+
+.flexRow:hover {
+    background-color: white;
+}
+
+/* testing card lift effect on .flexrow!: */
+.tButton, .praiseButton {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tButton:hover, .praiseButton:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.praiseButton {
+    background-color: white;
+}
+
+.tButton {
+    background-color: pink;
+}
+
+/* How to Make Container Shrink to Fit Wrapped Child Elements?? Talking about .footer (parent div) and .footer .myLinks (child div) */
+footer {
+    /* position: fixed; */
+    bottom: 0;
+    margin-top: 10px;
+    max-height: 55px;
+    padding: 10px 0 0 0;
+    justify-content: center;
+    display: flex;
 }
 
 /* fun hover effect for entire page div! */
-.pageWidth:hover {
+.pageWidth:hover, footer:hover {
     opacity: 100%;
 }
 
 div {
-    max-width: 80%; 
+    max-width: 100%; 
 }
 
 .firstRow {
@@ -54,46 +100,49 @@ div {
 
 /* fun effect on hover :3 */
 .h1Div:hover, h2:hover, .flexRow:hover, .pFirstRow:hover {
-    transform: scale(1.10);
+    transform: scale(1.07);
     color: #565044;
 }
 
 .secondRow {
     text-align: center;
+    width: 100%;
 } 
 
-/* NOTE: div container wrapping the <h2> title CANNOT be any smaller...*/
-.h2Div {
+.h2Div, h2 {
     margin: 0 auto;
 }
 
 .secondRowWrap {
-    display: inline-flex; 
-    padding: 5px 50px 0px 50px;
-    margin: 0 30px 30px 30px;
+    padding: 5px 0px 0px 0px;
+    margin: 0 0px 30px 0px;
     gap: 40px;
     justify-content: center; 
     align-items: center; 
     height: 300px;
 }
 
-.secondRowWrap h2 {
-    align-self: center;
-}
-
 .secondRowWrap p {
     font-size: 20px;
 }
 
+.innerFlexRow {
+    overflow-y: auto;
+    height: 200px;
+    min-width:100%;
+}
+
 .flexRow {
     border: 1px solid black;
-    overflow-y: auto;
-    max-width: 33%;
-    min-width: 30%;
+    max-width: 25%;
+    min-width: 25%;
     max-height: 200px;
     min-height: 200px;
     padding: 15px;
+    margin: 20px;
     border-radius: 18px;
+    overflow: hidden; 
+    display: inline-flex;
 }
 
 .myLinks {
@@ -106,21 +155,28 @@ div {
     padding: 30px;
 }
 
-.myLinks a img, button, .pageWidth {
+.myLinks a img, .pageWidth, .praiseButton footer {
     transition: all 0.3s ease-in-out;
 }
 
-.myLinks a img:hover, button:hover {
+.myLinks a img:hover, .praiseButton:hover {
     cursor: pointer;
     transform: scale(1.10);
 }
 
-/*  Relocate this button to a nicer spot when done with Website */
-button {
-    width: 50px;
-    height: 50px;
-    margin-top: 27px;
-    margin-left: 20px;
+.praiseButton {
+    width: 160px;
+    height: 30px;
+}
+
+.tButton, .praiseButton {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.tButton {
+    width: 100px;
 }
 
 /* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */

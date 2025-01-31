@@ -8,10 +8,15 @@
         body {
             font-family: 'Helvetica', sans-serif; font-size: 24px; color: #333;
         }
+        /* testing the effects. delete when done: */
+       
+
         </style>
         <title>Personal Website</title>
     </head>
 <body>
+    <!-- anchor for jumping back to top button -->
+    <a id="top"></a>
 <div class="pageWidth">
     <!-- <div class="logo">
         <img src="logo.png" alt="Website Logo" width="50" height="50">
@@ -28,38 +33,49 @@
     </div>
 
 <!-- SECOND ROW: PROJECTS-->
+ 
+ <!-- PROBLEM: Not mobile-friendly -> the page breaks at 125% Zoom, with the secondRow & secondRowWrap divs unable to contain the
+  elements within. The .flexRow div containers are no longer horizontally aligned after the Zoom test. The button also is no longer
+  aligned, althoug the button alignment issue is probably due to its positioning OUTSIDE the main Second Row containers. -->
     <div class="secondRow">
             <div class="h2Div"><h2>Projects.</h2></div>
         <div class="secondRowWrap">
+            <!-- TASK 1: When clicking on .flexRow container, user will be redirected (new tab) to my project in question. -->
+             <!-- TASK 2: Set up the groundwork so my TASK 1 can run smoothy...-->
             <div class="flexRow">
-            <h4>My First Project</h4>
-            <!-- INTERACTIVE IMAGE HERE -->
-            <p style="overflow-y:scroll;">A sample newsletter template circulating fresh headlines collected from multiple news sources. The sidebar will contain a Job Listings section where the data is scraped from multiple Job Sites.</p>
+                <div class="innerFlexRow">
+                <h4>My First Project</h4>
+                <!-- INTERACTIVE IMAGE HERE -->
+                <p>In a Nutshell: A sample newsletter template circulating fresh headlines collected from multiple news sources. The sidebar will contain a Job Listings section where the data is scraped from multiple Job Sites.</p>
+                </div>
             </div>
-
             <div class="flexRow">
-            <h4>My Second Project</h4>
-            <!-- INTERACTIVE IMAGE HERE -->
-            <p>An nifty little atuomated messaging bot that reminds your friends to reply to you! Simply type in the message, the receiver email and hit SEND!</p>
+                <div class="innerFlexRow">
+                <h4>My Second Project</h4>
+                <!-- INTERACTIVE IMAGE HERE -->
+                <p>Ding Ding Bot: A nifty little automated messaging bot that reminds your friends to reply to you! Simply type in the message, their email, and hit SEND!</p>
+                </div>
             </div>
-
             <div class="flexRow">
-            <h4>My Third Project</h4>
-            <!-- INTERACTIVE IMAGE HERE -->
-            <p>Fancy a tarot card reading? Check out my latest project! It totally predicts how your day would go!</p>
+                <div class="innerFlexRow">
+                <h4>My Third Project</h4>
+                <!-- INTERACTIVE IMAGE HERE -->
+                <p>Predict Your Future: Fancy a tarot card reading? Check out my latest project! It totally predicts how your day would go!</p>
+                </div>
             </div>
+            <!-- style and put this right under the 3 Project Squares: -->
+            <a href="https://buy.stripe.com/3csdS2fPcanL1AkfYY" target="_blank"><button class="praiseButton">Tell me I did well!</button></a>
         </div>
     </div>
-
-<div class="footer">
+</div>
+<footer class="footer">
     <div class="myLinks">
-        <ul style="list-style: none; display: flex;  gap: 10px;">
+        <ul style="list-style: none; display: flex;  gap: 10px; margin: 0;">
             <li><a href="https://github.com/wanyihuang/"><img src="github.png"/></a></li>
             <li><a href="https://www.linkedin.com/in/wendy-huang-116635191/"><img src="LinkedIn.png"/></a></li>
-            <li><a href="https://buy.stripe.com/3csdS2fPcanL1AkfYY"><button>Tip?!</button></a></li>
         </ul>
     </div>
-</div>
-</div>
+</footer>
+<div class="topButton" style="float: right; margin: 10px;"><a href="#top"><button class="tButton">TOP</button></a></div>
 </body>
 </html>
