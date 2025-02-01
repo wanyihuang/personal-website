@@ -1,189 +1,190 @@
-/*Wendy's CSS Page*/
-/* .logo {
-    transform: scaleX(-1);
-    border-radius: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-} */
-html, body {
-    cursor: url('cat-pointer.png'), default;
-  }
+    /*Wendy's CSS Page*/
+    /* .logo {
+        transform: scaleX(-1);
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    } */
 
-html {
-    scroll-behavior: smooth;
-    background-image: url('pink-bg.jpg');
-  }
+    html, body {
+        cursor: url('cat-pointer.png'), default;
+    }
 
-  /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
-  Make sure there is an 'OK' button in the middle, and X button in top right to exit !!! */
-.pageWidth, footer{
-    margin: 0 auto;
-    width: 80%;
-    place-items: center;
-    border-radius: 18px;
-    border: 1px solid black;
-    /* testing to make sure the opacity section works: */
-    background-color: #ffb7c5;
-    opacity: 70%;
-}
+    html {
+        scroll-behavior: smooth;
+        background-image: url('pink-bg.jpg');
+    }
 
-.tButton {
-    background-color: #ffb7c5;
-}
+    /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
+    Make sure there is an 'OK' button in the middle, and X button in top right to exit !!! */
+    .pageWidth, footer{
+        margin: 0 auto;
+        width: 80%;
+        place-items: center;
+        border-radius: 18px;
+        border: 1px solid black;
+        background-color: #ffb7c5;
+        opacity: 70%;
+    }
 
-.pageWidth, .tButton, .flexRow, .praiseButton {
-    transition: box-shadow 0.3s ease-in-out;
-}
+    .tButton {
+        background-color: #ffb7c5;
+    }
 
-.pageWidth:hover, .tButton:hover, .flexRow:hover, .praiseButton:hover {
-    box-shadow: 0 0 15px #565044;;
-}
+    .pageWidth, .tButton, .flexRow, .praiseButton {
+        transition: box-shadow 0.3s ease-in-out;
+    }
 
-.flexRow:hover {
-    background-color: white;
-}
+    .pageWidth:hover, .tButton:hover, .flexRow:hover, .praiseButton:hover {
+        box-shadow: 0 0 15px #565044;;
+    }
 
-.tButton, .praiseButton {
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .flexRow:hover {
+        background-color: white;
+    }
 
-.tButton:hover, .praiseButton:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+    .tButton, .praiseButton {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* How to Make Container Shrink to Fit Wrapped Child Elements?? Talking about .footer (parent div) and .footer .myLinks (child div) */
-footer {
-    /* position: fixed; */
-    bottom: 0;
-    margin-top: 10px;
-    max-height: 55px;
-    padding: 10px 0 0 0;
-    justify-content: center;
-    display: flex;
-}
+    .tButton:hover, .praiseButton:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
-/* fun hover effect for entire page div! */
-.pageWidth:hover, footer:hover {
-    opacity: 100%;
-}
+    /* How to Make Container Shrink to Fit Wrapped Child Elements?? Talking about .footer (parent div) and .footer .myLinks (child div) */
+    footer {
+        bottom: 0;
+        margin-top: 10px;
+        max-height: 55px;
+        padding: 10px 0 0 0;
+        justify-content: center;
+        display: flex;
+    }
 
-div {
-    max-width: 100%; 
-}
+    /* fun hover effect for entire page div! */
+    .pageWidth:hover, footer:hover {
+        opacity: 100%;
+    }
 
-.firstRow {
-    padding: 30px 60px;
-    margin: 10px;
-    text-align: center;
-    max-width: 65%;
-}
+    div {
+        max-width: 100%; 
+    }
 
-/* smooth transition! */
-.h1Div, h2, .flexRow, .pFirstRow {
-    transition: all 0.3s ease-in-out;
-}
+    .firstRow {
+        padding: 30px 60px;
+        margin: 10px;
+        text-align: center;
+        max-width: 65%;
+    }
 
-.h1Div {
-    padding: 30px 60px 0px 60px;
-}
+    /* smooth transition! */
+    .h1Div, h2, .flexRow, .pFirstRow {
+        transition: all 0.3s ease-in-out;
+    }
 
-/* fun effect on hover :3 */
-.h1Div:hover, h2:hover, .flexRow:hover, .pFirstRow:hover {
-    transform: scale(1.07);
-    color: #565044;
-}
+    .h1Div {
+        padding: 30px 60px 0px 60px;
+    }
 
-.secondRow {
-    text-align: center;
-    width: 100%;
-} 
+    /* fun effect on hover :3 */
+    .h1Div:hover, h2:hover, .flexRow:hover, .pFirstRow:hover {
+        transform: scale(1.07);
+        color: #565044;
+    }
 
-.h2Div, h2 {
-    margin: 0 auto;
-}
+    .secondRow {
+        text-align: center;
+        width: 100%;
+    } 
 
-.secondRowWrap {
-    padding: 5px 0px 0px 0px;
-    margin: 0 0px 30px 0px;
-    gap: 40px;
-    justify-content: center; 
-    align-items: center; 
-    height: 300px;
-}
+    .h2Div, h2 {
+        margin: 0 auto;
+    }
 
-.secondRowWrap p {
-    font-size: 20px;
-}
+    .secondRowWrap {
+        padding: 5px 0px 0px 0px;
+        margin: 0 0px 30px 0px;
+        gap: 40px;
+        justify-content: center; 
+        align-items: center; 
+        height: 300px;
+    }
 
-.innerFlexRow {
-    overflow-y: auto;
-    height: 200px;
-    min-width:100%;
-}
+    .secondRowWrap p {
+        font-size: 20px;
+    }
 
-.flexRow {
-    border: 1px solid black;
-    max-width: 25%;
-    min-width: 25%;
-    max-height: 200px;
-    min-height: 200px;
-    padding: 15px;
-    margin: 20px;
-    border-radius: 18px;
-    overflow: hidden; 
-    display: inline-flex;
-}
+    .innerFlexRow {
+        overflow-y: auto;
+        height: 200px;
+        min-width:100%;
+    }
 
-.myLinks {
-    padding: 0px;
-    margin: 0px;
-}
+    .flexRow {
+        border: 1px solid black;
+        max-width: 25%;
+        min-width: 25%;
+        max-height: 200px;
+        min-height: 200px;
+        padding: 15px;
+        margin: 20px;
+        border-radius: 18px;
+        overflow: hidden; 
+        display: inline-flex;
+    }
 
-  .myLinks a img {
-    max-height: 45px;
-    padding: 30px;
-}
+    .myLinks {
+        padding: 0px;
+        margin: 0px;
+    }
 
-/* took out .praiseButton JUST to test float anim from 2 {}s down: */
-.myLinks a img, .pageWidth, footer {
-    transition: all 0.3s ease-in-out;
-}
+    .myLinks a img {
+        max-height: 45px;
+        padding: 30px;
+    }
 
-.myLinks a img:hover, .praiseButton:hover, .tButton:hover {
-    cursor: pointer;
-}
+    /* took out .praiseButton JUST to test float anim from 2 {}s down: */
+    .myLinks a img, .pageWidth, footer {
+        transition: all 0.3s ease-in-out;
+    }
 
-.myLinks a img:hover, .praiseButton:hover {
-    transform: scale(1.10);
-}
+    .myLinks a img:hover, .praiseButton:hover, .tButton:hover {
+        cursor: pointer;
+    }
 
-.praiseButton {
-    background-color: white;
-    margin-top: 10px;
-    width: 160px;
-    height: 30px;
-    /* testing float anim from chatgpt: */
-    animation: float 3s ease-in-out infinite;
-}
+    .myLinks a img:hover, .praiseButton:hover {
+        transform: scale(1.10);
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
+    .praiseButton {
+        background-color: white;
+        margin-top: 10px;
+        width: 160px;
+        height: 30px;
+    }
 
-.tButton, .praiseButton {
-    border-radius: 10px;
-    border: 1px solid black;
-    height: 30px;
-}
+    .praiseButton:hover {
+        animation: float 3s ease-in-out infinite;
+    }
 
-.tButton {
-    width: 100px;
-}
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
 
-/* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */
+    .tButton, .praiseButton {
+        border-radius: 10px;
+        border: 1px solid black;
+        height: 30px;
+    }
+
+    .tButton {
+        width: 100px;
+    }
+
+    /* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */
