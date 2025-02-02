@@ -1,13 +1,4 @@
     /*Wendy's CSS Page*/
-    /* .logo {
-        transform: scaleX(-1);
-        border-radius: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 10px;
-    } */
-
     html, body {
         cursor: url('cat-pointer.png'), default;
     }
@@ -102,7 +93,7 @@
         width: 100%;
     } 
 
-    .h2Div, h2 {
+   h2 {
         margin: 0 auto;
     }
 
@@ -148,7 +139,6 @@
         padding: 30px;
     }
 
-    /* took out .praiseButton JUST to test float anim from 2 {}s down: */
     .myLinks a img, .pageWidth, footer {
         transition: all 0.3s ease-in-out;
     }
