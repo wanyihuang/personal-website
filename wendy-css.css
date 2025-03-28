@@ -189,3 +189,13 @@
     }
 
     /* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */
+    @media screen and (min-width: 732px){
+        body {
+            max-width: 100%;
+            margin: 0 auto; 
+            padding-top: 50px;
+        }
+    }
+
+    /* New idea: seperate your 1st row div and 2nd row divs into 2 seperate rows across the page. make them take up 100% width
+    and add lots of white space between the two. this makes it easier on the eyes. */
