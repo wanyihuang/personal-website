@@ -116,6 +116,10 @@
         min-width:100%;
     }
 
+    .innerFlexRow p {
+        margin: 10px;
+    }
+
     /* FIXED: issue with horziontal alignment inner div breaks is due to padding adjustment in .flexRow: */
     .flexRow {
         border: 1px solid black;
