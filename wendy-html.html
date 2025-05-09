@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="wendy-css.css">
         <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap" rel="stylesheet">
         <style>
@@ -12,63 +13,45 @@
         <title>Personal Website</title>
     </head>
 <body>
-    <!-- anchor for jumping back to top button -->
     <a id="top"></a>
 <div class="pageWidth">
- <!-- FIRST ROW: WHO ARE YOU? WHAT DO YOU DO? HOW CAN YOU HELP?-->
     <div class="firstRow">
         <div class="h1Div" style="display: inline-flex; height: 7rem;">
         <h1>Wendy Huang.</h1>
         </div>
-        <p class="pFirstRow">Hi! I'm Wendy. I'm currently pursuing a Bachelors of Cybersecurity at UTS and my life ambition is to 
-            build and foster a community of like-minded folks who are also looking for a place to call home.
-            I hope I can be of use with my services of: HTML/CSS, React, JS, Python, PHP, SQL.</p>
+        <p class="pFirstRow">Remember the thrill you felt as a kid when you got your hands on your first computer? This is the feeling that I wish to embody in my projects.
+            <br><br>Hi! I'm Wendy. I'm pursuing a Bachelors of Cybersecurity (grad: 2026) and my purpose is to bring YOUR dreams to life.<br>
+            <br>I can help you with: HTML/CSS, JS, Python, FastAPI, SQL.</p>
     </div>
 
 <!-- SECOND ROW: PROJECTS-->
- 
- <!-- PROBLEM: Not mobile-friendly -> the page breaks at 125% Zoom, with the secondRow & secondRowWrap divs unable to contain the
-  elements within. The .flexRow div containers are no longer horizontally aligned after the Zoom test. The button also is no longer
-  aligned, although the button alignment issue is probably due to its positioning OUTSIDE the main Second Row containers. -->
     <div class="secondRow">
             <h2>Projects.</h2>
         <div class="secondRowWrap">
-
-
-
-
-            <!-- TASK 1: When clicking on .flexRow container, user will be redirected (new tab) to my project in question. -->
-             <!-- TASK 2: Set up the groundwork so my TASK 1 can run smoothly...-->
-             <!-- <a href="URL" target="_blank"> -->
              <div class="flexRow">
                 <div class="innerFlexRow">
                 <h4>My First Project</h4>
                 <!-- INTERACTIVE IMAGE HERE -->
-                <p>In a Nutshell: A sample newsletter template circulating fresh headlines collected from multiple news sources. The sidebar will contain a Job Listings section where the data is scraped from multiple Job Sites.</p>
+                <p>A newsletter delivering fresh new headlines daily, curated for your taste. The sidebar will contain a Job Listings section where the data is scraped from multiple Job Sites.</p>
                 </div>
             </div>
-            <!-- </a> -->
-            
-
-
-
             <div class="flexRow">
                 <div class="innerFlexRow">
                 <h4>My Second Project</h4>
                 <!-- INTERACTIVE IMAGE HERE -->
-                <p>Poke Poke Bot: A nifty little automated poke bot that reminds your friends to reply to you! Simply type in their phone number, the frequency, and hit POKE!</p>
+                <p>Poke Bot: A nifty little bot friend that will reminds your friends to reply to you! Simply type in their phone number, the frequency amount, and hit POKE!</p>
                 </div>
             </div>
             <div class="flexRow">
                 <div class="innerFlexRow">
                 <h4>My Third Project</h4>
                 <!-- INTERACTIVE IMAGE HERE -->
-                <p>Predict Your Future: Fancy a tarot card reading? Check out my latest project! It totally predicts how your day would go!</p>
+                <p>A fully anonymous chatroom where we can fully be ourselves. Customise your experience by clicking a suspicious-looking button that won't tell you what happens.</p>
                 </div>
             </div>
-            
-<!--  USE: display: flex, but this breaks layout again. but you need to do this to make the website puurfect~! -->
-            <a href="https://buy.stripe.com/3csdS2fPcanL1AkfYY" target="_blank"><button class="praiseButton">Tell me I did well!</button></a>
+            <!-- This cunt is BREAKING: -->
+            <div class="praiseButtonDiv"><a href="https://buy.stripe.com/3csdS2fPcanL1AkfYY" target="_blank">
+            <button class="praiseButton">Tell me I did well!</button></a></div>
         </div>
     </div>
 </div>

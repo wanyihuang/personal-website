@@ -8,8 +8,9 @@
         background-image: url('pink-bg.jpg');
     }
 
-    /* FUN IDEA!! IMPLEMENT THIS: on page load, display a textbox popup that says: Hi! Hover over the page to see my portfolio! 
-    Make sure there is an 'OK' button in the middle, and X button in top right to exit !!! */
+    /* IDEA: Add landing page with nothing but an alert box with button. 
+        Click button to redirect to wendy-html page
+        This alert box will look like a Windows 2000 button, but in pink.*/
     .pageWidth, footer{
         margin: 0 auto;
         width: 80%;
@@ -36,17 +37,6 @@
         background-color: white;
     }
 
-    a {
-        text-decoration: none;
-        color:#333;
-    }
-
-    /* TASK: making flexRow div show the hyperlink underline when hovering: */
-    /* problem: doesn't work... */
-    a:hover {
-        text-decoration: underline;
-      }
-
     .tButton, .praiseButton {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -58,7 +48,6 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
-    /* How to Make Container Shrink to Fit Wrapped Child Elements?? Talking about .footer (parent div) and .footer .myLinks (child div) */
     footer {
         bottom: 0;
         margin-top: 10px;
@@ -127,17 +116,17 @@
         min-width:100%;
     }
 
+    /* FIXED: issue with horziontal alignment inner div breaks is due to padding adjustment in .flexRow: */
     .flexRow {
         border: 1px solid black;
         max-width: 25%;
         min-width: 25%;
         max-height: 200px;
         min-height: 200px;
-        padding: 15px;
         margin: 20px;
         border-radius: 18px;
         overflow: hidden; 
-        display: inline-flex;
+        display: inline-flex; 
     }
 
     .myLinks {
@@ -188,14 +177,31 @@
         width: 100px;
     }
 
-    /* WHEN YOU'RE DONE WITH DESKTOP CSS STRUCTURE, TURN TO: media queries to adjust the styles for smaller or larger screens! */
-    @media screen and (min-width: 732px){
+    /* em instead of px for accessibility. 100em = 1 */
+    @media screen and (min-width: 100em){ 
         body {
             max-width: 100%;
             margin: 0 auto; 
             padding-top: 50px;
         }
+
+        /* CHATGPT SUGGESTIONS. ADJUST OBVIOUSLY: */
+        .secondRowWrap {
+            flex-wrap: wrap; /* Allow vertical stacking */
+            justify-content: center; /* Center items */
+            overflow-x: visible; /* Disable horizontal scroll */
+        }   
+    
+        .flexRow {
+            flex: 0 0 90% !important; /* Full width with margin */
+            max-width: 600px; /* Max size for readability */
+            margin: 10px auto; /* Center blocks */
+        }
+        
+        .praiseButton {
+            margin: 20px auto !important; /* Center button */
+        }
     }
 
-    /* New idea: seperate your 1st row div and 2nd row divs into 2 seperate rows across the page. make them take up 100% width
-    and add lots of white space between the two. this makes it easier on the eyes. */
+    /* New idea: change html page to display only 1 row div at a time. scroll x amount to "transition" to 2nd row div
+        ...Maybe needs JS to impelement smooth transitions + hiding 1st row div.*/
