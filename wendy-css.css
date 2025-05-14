@@ -5,26 +5,25 @@
 
     html {
         scroll-behavior: smooth;
-        background-image: url('pink-bg.jpg');
+        /* background-image: url('simple-pink-bg.jpg'); */
+        background-color: #d8cdb9;
     }
 
-    /* IDEA: Add landing page with nothing but an alert box with button. 
-        Click button to redirect to wendy-html page
-        This alert box will look like a Windows 2000 button, but in pink.*/
     .pageWidth, footer{
         margin: 0 auto;
-        width: 70%;
+        width: 60%;
         place-items: center;
         border-radius: 18px;
         border: 1px solid black;
         background-color: #ffb7c5;
         opacity: 70%;
+        scrollbar-color: #322f2b white;
     }
 
     /* Cmts: Pushed .pageWidth down to add New Feature: A   Scrollable Button + JS "Google Search UserInput Field"
         + Blinking Cursor JS item at the end of JS Google Search Field */
     .pageWidth {
-        margin-top: 800px;
+        margin-top: 600px;
     }
 
     .tButton {
@@ -36,7 +35,12 @@
     }
 
     .pageWidth:hover, .tButton:hover, .flexRow:hover, .praiseButton:hover {
-        box-shadow: 0 0 15px #565044;;
+        box-shadow: 0 0 15px #565044;
+        /* box-shadow: 15px 15px 15px -15px #565044; */
+    }
+
+    .footer:hover {
+        box-shadow: 0 15px 15px -15px #565044;
     }
 
     .flexRow:hover {
@@ -96,7 +100,7 @@
     }
 
     /* smooth transition! */
-    .h1Div, h2, .flexRow, .pFirstRow {
+    .h1Div, h2, .flexRow {
         transition: all 0.3s ease-in-out;
     }
 
@@ -105,7 +109,7 @@
     }
 
     /* fun effect on hover :3 */
-    .h1Div:hover, h2:hover, .flexRow:hover, .pFirstRow:hover {
+    .h1Div:hover, h2:hover, .flexRow:hover {
         transform: scale(1.07);
         color: #565044;
     }
